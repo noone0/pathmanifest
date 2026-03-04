@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://softwaremanifesto.dev/sitemap.xml
+Sitemap: https://pathmanifest.pathify.uk/sitemap.xml

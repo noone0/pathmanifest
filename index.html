@@ -6,385 +6,687 @@
   <meta name="robots" content="index, follow" />
 
   <!-- Primary SEO -->
-  <title>Software Manifesto — Principles for Modern Software Development</title>
-  <meta name="description" content="The Software Manifesto defines 10 core principles for modern software development: simplicity, clarity, testing, ownership, and continuous improvement." />
-  <link rel="canonical" href="https://softwaremanifesto.dev/" />
+  <title>Path Culture Book — The 12 Principles of Path</title>
+  <meta name="description" content="Discover the 12 core principles that define Path's engineering culture: AI-First, remote-first, ownership, automation, quality, and results-driven excellence." />
+  <link rel="canonical" href="https://pathmanifest.pathify.uk/" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://softwaremanifesto.dev/" />
-  <meta property="og:title" content="Software Manifesto — Principles for Modern Software Development" />
-  <meta property="og:description" content="10 guiding principles every software developer should live by. Simple, timeless, actionable." />
-  <meta property="og:image" content="https://softwaremanifesto.dev/og-image.png" />
+  <meta property="og:url" content="https://pathmanifest.pathify.uk/" />
+  <meta property="og:title" content="Path Culture Book — The 12 Principles of Path" />
+  <meta property="og:description" content="The 12 principles that guide how Path operates: AI-First, remote-first, ownership culture, automation, quality, and impact-driven engineering." />
+  <meta property="og:image" content="https://pathmanifest.pathify.uk/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:site_name" content="Software Manifesto" />
+  <meta property="og:site_name" content="Path Culture Book" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Software Manifesto — Principles for Modern Software Development" />
-  <meta name="twitter:description" content="10 guiding principles every software developer should live by." />
-  <meta name="twitter:image" content="https://softwaremanifesto.dev/og-image.png" />
+  <meta name="twitter:title" content="Path Culture Book — The 12 Principles of Path" />
+  <meta name="twitter:description" content="The 12 principles that guide how Path operates: AI-First, remote-first, ownership, automation, quality, and results." />
+  <meta name="twitter:image" content="https://pathmanifest.pathify.uk/og-image.png" />
+
+  <!-- Additional SEO -->
+  <meta name="keywords" content="Path culture, engineering culture, AI-first, remote-first, software principles, team culture, Path Internet Solutions" />
+  <meta name="author" content="Path Internet Solutions" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Software Manifesto",
-    "headline": "The Software Manifesto — Principles for Modern Software Development",
-    "description": "10 core principles guiding modern software development: simplicity, clarity, testing, ownership, collaboration, and continuous improvement.",
-    "url": "https://softwaremanifesto.dev/",
+    "name": "Path Culture Book — The 12 Principles of Path",
+    "headline": "Path Culture Book — The 12 Principles of Path",
+    "description": "The 12 core principles that define Path's engineering and organizational culture.",
+    "url": "https://pathmanifest.pathify.uk/",
     "inLanguage": "en",
     "datePublished": "2026-03-04",
     "dateModified": "2026-03-04",
     "author": {
       "@type": "Organization",
-      "name": "Software Manifesto"
+      "name": "Path Internet Solutions",
+      "url": "https://pathmanifest.pathify.uk/"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Software Manifesto",
-      "url": "https://softwaremanifesto.dev/"
+      "name": "Path Internet Solutions",
+      "url": "https://pathmanifest.pathify.uk/"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "The 12 Principles of Path",
+      "numberOfItems": 12,
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Slack Is Our Communication Center"},
+        {"@type": "ListItem", "position": 2, "name": "We Work Remote-First"},
+        {"@type": "ListItem", "position": 3, "name": "Ownership Culture"},
+        {"@type": "ListItem", "position": 4, "name": "We Are AI-First"},
+        {"@type": "ListItem", "position": 5, "name": "The Rule of Three Checks"},
+        {"@type": "ListItem", "position": 6, "name": "We Understand the Problem Better Than the Sender"},
+        {"@type": "ListItem", "position": 7, "name": "Documentation Is Culture"},
+        {"@type": "ListItem", "position": 8, "name": "Simplicity Is Power"},
+        {"@type": "ListItem", "position": 9, "name": "Automation Always Wins"},
+        {"@type": "ListItem", "position": 10, "name": "Speed and Quality Go Together"},
+        {"@type": "ListItem", "position": 11, "name": "Learning Never Stops"},
+        {"@type": "ListItem", "position": 12, "name": "We Deliver Results"}
+      ]
     }
   }
   </script>
 
   <style>
-    /* === Reset & Base === */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+    /* ── CSS Custom Properties ── */
     :root {
-      --clr-bg: #0f1117;
-      --clr-surface: #1a1d27;
-      --clr-border: #2a2d3a;
-      --clr-accent: #6c63ff;
-      --clr-accent2: #ff6584;
-      --clr-text: #e8e9f0;
-      --clr-muted: #8b8fa8;
-      --font: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-      --max-w: 800px;
-      --radius: 12px;
+      --bg-primary:    #050810;
+      --bg-card:       #0d1117;
+      --bg-card-hover: #111827;
+      --border:        rgba(59, 130, 246, 0.15);
+      --border-hover:  rgba(99, 102, 241, 0.5);
+      --text-primary:  #f1f5f9;
+      --text-secondary:#94a3b8;
+      --text-muted:    #475569;
+      --accent-blue:   #3b82f6;
+      --accent-violet: #7c3aed;
+      --accent-indigo: #6366f1;
+      --gradient:      linear-gradient(135deg, #3b82f6, #6366f1, #7c3aed);
+      --gradient-hero: linear-gradient(160deg, #050810 0%, #0f172a 40%, #1e1b4b 100%);
+      --shadow-card:   0 4px 24px rgba(0,0,0,0.4);
+      --shadow-hover:  0 8px 40px rgba(99,102,241,0.25);
+      --radius:        16px;
+      --font:          system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
     }
 
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
       font-family: var(--font);
-      background: var(--clr-bg);
-      color: var(--clr-text);
+      background: var(--bg-primary);
+      color: var(--text-primary);
       line-height: 1.7;
-      font-size: 1rem;
-      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
+    a { color: inherit; text-decoration: none; }
 
-    a { color: var(--clr-accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* === Layout === */
-    .container {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 1.25rem;
-    }
-
-    /* === Header / Hero === */
-    header {
-      background: linear-gradient(135deg, #1a1d27 0%, #0f1117 100%);
-      border-bottom: 1px solid var(--clr-border);
-      padding: 4rem 1.25rem 3.5rem;
-      text-align: center;
-    }
-
-    .logo {
-      display: inline-flex;
+    /* ── Nav ── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
       align-items: center;
-      gap: 0.5rem;
-      font-size: 0.85rem;
+      justify-content: space-between;
+      background: rgba(5, 8, 16, 0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-logo {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      padding: 0.3rem 0.6rem;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .nav-links a:hover {
+      color: var(--text-primary);
+      background: rgba(255,255,255,0.06);
+    }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    /* ── Hero ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+      background: var(--gradient-hero);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      pointer-events: none;
+    }
+    .hero-label {
+      display: inline-block;
+      font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--clr-accent);
-      margin-bottom: 2rem;
+      color: var(--accent-indigo);
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.3);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.5rem;
     }
-
-    .logo svg { width: 20px; height: 20px; fill: var(--clr-accent); }
-
-    h1 {
-      font-size: clamp(2rem, 6vw, 3.5rem);
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 4.5rem);
       font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #fff 30%, #a5b4fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+    .hero-desc {
+      max-width: 600px;
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--gradient);
       color: #fff;
-      margin-bottom: 1rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.85rem 2rem;
+      border-radius: 999px;
+      transition: opacity 0.2s, transform 0.2s;
+      box-shadow: 0 4px 24px rgba(99,102,241,0.35);
+    }
+    .hero-cta:hover { opacity: 0.9; transform: translateY(-2px); }
+    .hero-count {
+      margin-top: 4rem;
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .hero-stat { text-align: center; }
+    .hero-stat-num {
+      font-size: 2rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+    /* ── Section ── */
+    .section {
+      padding: 5rem 2rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 4vw, 2.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+    .section-sub {
+      margin-top: 0.75rem;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    h1 span {
-      background: linear-gradient(90deg, var(--clr-accent), var(--clr-accent2));
+    /* ── Principles Grid ── */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 1024px) { .principles-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px)  { .principles-grid { grid-template-columns: 1fr; } }
+
+    /* ── Principle Card ── */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+      scroll-margin-top: 80px;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--border-hover);
+      background: var(--bg-card-hover);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .card-num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--accent-indigo);
+      background: rgba(99,102,241,0.1);
+      border: 1px solid rgba(99,102,241,0.25);
+      border-radius: 8px;
+      padding: 0.3rem 0.55rem;
+      min-width: 2.2rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .card-icon {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      line-height: 1.3;
+    }
+    .card-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    .card-divider {
+      height: 2px;
+      background: var(--gradient);
+      border-radius: 999px;
+      width: 40px;
+      opacity: 0.6;
+    }
+
+    /* ── Summary Section ── */
+    .summary-section {
+      background: linear-gradient(135deg, #0d1117 0%, #0f172a 50%, #1e1b4b 100%);
+      border: 1px solid rgba(99,102,241,0.2);
+      border-radius: 24px;
+      padding: 4rem 3rem;
+      margin: 2rem auto 5rem;
+      max-width: 1280px;
+      text-align: center;
+    }
+    .summary-title {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #fff, #a5b4fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .summary-body {
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+    .summary-pillars {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+    }
+    .pillar {
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.55rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(99,102,241,0.35);
+      background: rgba(99,102,241,0.1);
+      color: #a5b4fc;
+      transition: background 0.2s, border-color 0.2s;
+    }
+    .pillar:hover {
+      background: rgba(99,102,241,0.2);
+      border-color: rgba(99,102,241,0.6);
+    }
+    .summary-closing {
+      margin-top: 2.5rem;
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      font-style: italic;
+    }
+    .summary-closing strong {
+      color: var(--text-primary);
+      font-style: normal;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    footer strong {
+      background: var(--gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    .tagline {
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      color: var(--clr-muted);
-      max-width: 560px;
-      margin: 0 auto 2rem;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: rgba(108, 99, 255, 0.15);
-      border: 1px solid rgba(108, 99, 255, 0.35);
-      color: var(--clr-accent);
-      padding: 0.35rem 1rem;
-      border-radius: 99px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-    }
-
-    /* === Main Content === */
-    main {
-      padding: 3rem 0 4rem;
-    }
-
-    .section-intro {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    h2 {
-      font-size: clamp(1.4rem, 4vw, 2rem);
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
-    }
-
-    .section-intro p {
-      color: var(--clr-muted);
-      font-size: 1.05rem;
-    }
-
-    /* === Principles Grid === */
-    .principles {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      list-style: none;
-    }
-
-    @media (min-width: 600px) {
-      .principles { grid-template-columns: 1fr 1fr; }
-    }
-
-    .principle {
-      background: var(--clr-surface);
-      border: 1px solid var(--clr-border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      position: relative;
-      transition: border-color 0.2s, transform 0.2s;
-    }
-
-    .principle:hover {
-      border-color: var(--clr-accent);
-      transform: translateY(-2px);
-    }
-
-    .principle-num {
+    /* ── Scroll indicator ── */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--text-muted);
       font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--clr-accent);
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
+      animation: bounce 2s infinite;
     }
-
-    h3 {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.5rem;
-      line-height: 1.3;
+    .scroll-indicator svg { opacity: 0.5; }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(6px); }
     }
-
-    .principle p {
-      font-size: 0.9rem;
-      color: var(--clr-muted);
-      line-height: 1.6;
-    }
-
-    /* === Quote / Highlight === */
-    .manifesto-quote {
-      background: rgba(108, 99, 255, 0.08);
-      border-left: 4px solid var(--clr-accent);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      padding: 1.25rem 1.5rem;
-      margin: 3rem 0;
-      font-size: 1.05rem;
-      font-style: italic;
-      color: var(--clr-text);
-    }
-
-    /* === CTA === */
-    .cta {
-      text-align: center;
-      margin-top: 3rem;
-      padding: 2.5rem;
-      background: var(--clr-surface);
-      border: 1px solid var(--clr-border);
-      border-radius: var(--radius);
-    }
-
-    .cta h2 { margin-bottom: 0.75rem; }
-    .cta p { color: var(--clr-muted); margin-bottom: 1.5rem; }
-
-    .btn {
-      display: inline-block;
-      background: var(--clr-accent);
-      color: #fff;
-      padding: 0.75rem 2rem;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: opacity 0.2s, transform 0.2s;
-    }
-
-    .btn:hover { opacity: 0.88; transform: translateY(-1px); text-decoration: none; }
-
-    /* === Footer === */
-    footer {
-      border-top: 1px solid var(--clr-border);
-      padding: 2rem 1.25rem;
-      text-align: center;
-      color: var(--clr-muted);
-      font-size: 0.85rem;
-    }
-
-    footer a { color: var(--clr-muted); }
-    footer a:hover { color: var(--clr-accent); }
   </style>
 </head>
 <body>
 
-  <!-- ===== HEADER / HERO ===== -->
-  <header>
-    <div class="container">
-      <div class="logo">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-        </svg>
-        Software Manifesto
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-logo">Path Culture Book</div>
+    <ul class="nav-links" role="list">
+      <li><a href="#principle-1">01</a></li>
+      <li><a href="#principle-2">02</a></li>
+      <li><a href="#principle-3">03</a></li>
+      <li><a href="#principle-4">04</a></li>
+      <li><a href="#principle-5">05</a></li>
+      <li><a href="#principle-6">06</a></li>
+      <li><a href="#principle-7">07</a></li>
+      <li><a href="#principle-8">08</a></li>
+      <li><a href="#principle-9">09</a></li>
+      <li><a href="#principle-10">10</a></li>
+      <li><a href="#principle-11">11</a></li>
+      <li><a href="#principle-12">12</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-label">Path Internet Solutions</div>
+    <h1 id="hero-title">Path Culture Book</h1>
+    <p class="hero-subtitle">The 12 Principles of Path</p>
+    <p class="hero-desc">
+      The values, habits, and beliefs that define how we work, build, and grow together as a team.
+    </p>
+    <a href="#principles" class="hero-cta" aria-label="Explore the 12 principles">
+      <span>Explore the Principles</span>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    </a>
+    <div class="hero-count" aria-label="Key stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">12</div>
+        <div class="hero-stat-label">Core Principles</div>
       </div>
-      <h1>The <span>Software Manifesto</span></h1>
-      <p class="tagline">
-        Ten principles every developer should live by — a guide to building software that is simple, human, and built to last.
-      </p>
-      <span class="hero-badge">v1.0 · Open for All</span>
-    </div>
-  </header>
-
-  <!-- ===== MAIN CONTENT ===== -->
-  <main>
-    <div class="container">
-
-      <div class="section-intro">
-        <h2>The Principles</h2>
-        <p>The Software Manifesto distills decades of hard-won engineering wisdom into ten actionable truths.</p>
+      <div class="hero-stat">
+        <div class="hero-stat-num">1</div>
+        <div class="hero-stat-label">Shared Culture</div>
       </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">∞</div>
+        <div class="hero-stat-label">Impact</div>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+    </div>
+  </section>
 
-      <ol class="principles" role="list">
+  <!-- Principles -->
+  <section id="principles" class="section" aria-labelledby="principles-title">
+    <div class="section-header">
+      <div class="section-tag">Our Foundation</div>
+      <h2 class="section-title" id="principles-title">The 12 Principles</h2>
+      <p class="section-sub">These principles are not rules. They are the natural way we think, work, and build at Path.</p>
+    </div>
 
-        <li class="principle">
-          <div class="principle-num">Principle 01</div>
-          <h3>Simplicity Over Cleverness</h3>
-          <p>Write code that a junior developer can understand at 2 AM. The smartest solution is usually the simplest one — resist the urge to be clever.</p>
-        </li>
+    <div class="principles-grid">
 
-        <li class="principle">
-          <div class="principle-num">Principle 02</div>
-          <h3>Clarity Is Kindness</h3>
-          <p>Code is read far more than it is written. Name things honestly, comment why (not what), and treat every future reader as someone you respect.</p>
-        </li>
+      <!-- 1 -->
+      <article class="card" id="principle-1" aria-labelledby="title-1">
+        <div class="card-header">
+          <span class="card-num" aria-label="Principle 1">01</span>
+          <span class="card-icon" aria-hidden="true">💬</span>
+        </div>
+        <div class="card-divider"></div>
+        <h2 class="card-title" id="title-1">Slack Is Our Communication Center</h2>
+        <p class="card-desc">
+          Slack is the official communication platform of Path. All operational communication, project discussions, and decisions are conducted within the Path Slack Workspace. While other tools may be used when necessary, Slack remains the single source of truth for communication.
+        </p>
+      </article>
 
-        <li class="principle">
-          <div class="principle-num">Principle 03</div>
-          <h3>Test What You Ship</h3>
-          <p>Untested code is a liability. Write tests that describe behavior, not implementation — they are the executable documentation of your intentions.</p>
-        </li>
+      <!-- 2 -->
+      <article class="card" id="principle-2" aria-labelledby="title-2">
+        <div class="card-header">
+          <span class="card-num" aria-label="Principle 2">02</span>
+          <span class="card-icon" aria-hidden="true">🌍</span>
+        </div>
+        <div class="card-divider"></div>
+        <h2 class="card-title" id="title-2">We Work Remote-First</h2>
+        <p class="card-desc">
+          Path operates as a remote-first organization. Where we work from is not important. What matters is the value we produce. Working hours are organized based on: project needs, team coordination, delivery timelines.
+        </p>
+      </article>
 
-        <li class="principle">
-          <div class="principle-num">Principle 04</div>
-          <h3>Own Your Decisions</h3>
-          <p>Every architectural choice has consequences. Make them deliberately, document the reasoning, and take responsibility when they need to change.</p>
-        </li>
+      <!-- 3 -->
+      <article class="card" id="principle-3" aria-labelledby="title-3">
+        <div class="card-header">
+          <span class="card-num" aria-label="Principle 3">03</span>
+          <span class="card-icon" aria-hidden="true">🎯</span>
+        </div>
+        <div class="card-divider"></div>
+        <h2 class="card-title" id="title-3">Ownership Culture</h2>
+        <p class="card-desc">
+          Every task at Path has an owner. The code we write, the systems we build, and the results we deliver are our responsibility. Nothing is ever left with the mindset of: "My job is done. Someone else will handle the rest."
+        </p>
+      </article>
 
-        <li class="principle">
-          <div class="principle-num">Principle 05</div>
-          <h3>Collaborate Relentlessly</h3>
-          <p>Great software is not built in isolation. Share early, review openly, and treat every code review as a learning opportunity rather than a judgment.</p>
-        </li>
+      <!-- 4 -->
+      <article class="card" id="principle-4" aria-labelledby="title-4">
+        <div class="card-header">
+          <span class="card-num" aria-label="Principle 4">04</span>
+          <span class="card-icon" aria-hidden="true">🤖</span>
+        </div>
+        <div class="card-divider"></div>
+        <h2 class="card-title" id="title-4">We Are AI-First</h2>
+        <p class="card-desc">
+          Path is an AI-First organization. We actively use AI tools for: research, development, documentation, testing, automation, decision support. However, we always remember: AI generates. Humans are responsible.
+        </p>
+      </article>
 
-        <li class="principle">
-          <div class="principle-num">Principle 06</div>
-          <h3>Iterate, Don't Procrastinate</h3>
-          <p>Shipped and imperfect beats perfect and theoretical. Deliver value early, gather feedback, and improve continuously in small, safe steps.</p>
-        </li>
+      <!-- 5 -->
+      <article class="card" id="principle-5" aria-labelledby="title-5">
+        <div class="card-header">
+          <span class="card-num" aria-label="Principle 5">05</span>
+          <span class="card-icon" aria-hidden="true">✅</span>
+        </div>
+        <div class="card-divider"></div>
+        <h2 class="card-title" id="title-5">The Rule of Three Checks</h2>
+        <p class="card-desc">
+          No work at Path is delivered without verification. Every output must be checked at least three times: 1. Logical review &nbsp; 2. Technical validation &nbsp; 3. End-user impact review. Quality is not accidental. It is the result of discipline.
+        </p>
+      </article>
 
-        <li class="principle">
-          <div class="principle-num">Principle 07</div>
-          <h3>Security Is Not Optional</h3>
-          <p>Security is a feature, not a phase. Build it in from day one — validate inputs, least-privilege by default, and threat-model before you code.</p>
-        </li>
+      <!-- 6 -->
+      <article class="card" id="principle-6" aria-labelledby="title-6">
+        <div class="card-header">
+          <span class="card-num" aria-label="Principle 6">06</span>
+          <span class="card-icon" aria-hidden="true">🔍</span>
+        </div>
+        <div class="card-divider"></div>
+        <h2 class="card-title" id="title-6">We Understand the Problem Better Than the Sender</h2>
+        <p class="card-desc">
+          One of Path's core mottos: We never deliver work without understanding the problem better than the person who sent it. We do not produce superficial solutions. We aim to understand the root cause of the problem.
+        </p>
+      </article>
 
-        <li class="principle">
-          <div class="principle-num">Principle 08</div>
-          <h3>Performance Is Respect</h3>
-          <p>Slow software disrespects users' time. Measure before optimizing, optimize where it matters most, and make speed a first-class product requirement.</p>
-        </li>
+      <!-- 7 -->
+      <article class="card" id="principle-7" aria-labelledby="title-7">
+        <div class="card-header">
+          <span class="card-num" aria-label="Principle 7">07</span>
+          <span class="card-icon" aria-hidden="true">📚</span>
+        </div>
+        <div class="card-divider"></div>
+        <h2 class="card-title" id="title-7">Documentation Is Culture</h2>
+        <p class="card-desc">
+          Knowledge at Path lives in systems, not in people's heads. Every project should include: README documentation, technical explanations, architecture descriptions. Documentation is not written after the work is done. It is written while the work is being done.
+        </p>
+      </article>
 
-        <li class="principle">
-          <div class="principle-num">Principle 09</div>
-          <h3>Document to Empower</h3>
-          <p>Documentation is infrastructure. Write it for your future self, for your team, and for the developer who will maintain this system long after you're gone.</p>
-        </li>
+      <!-- 8 -->
+      <article class="card" id="principle-8" aria-labelledby="title-8">
+        <div class="card-header">
+          <span class="card-num" aria-label="Principle 8">08</span>
+          <span class="card-icon" aria-hidden="true">⚡</span>
+        </div>
+        <div class="card-divider"></div>
+        <h2 class="card-title" id="title-8">Simplicity Is Power</h2>
+        <p class="card-desc">
+          We build simple and sustainable systems. Good engineering produces solutions that are: readable, understandable, maintainable. Complexity is avoided whenever possible.
+        </p>
+      </article>
 
-        <li class="principle">
-          <div class="principle-num">Principle 10</div>
-          <h3>Serve the Human</h3>
-          <p>Technology exists to solve human problems. Never lose sight of the person on the other side of the screen — their needs are the north star of every line you write.</p>
-        </li>
+      <!-- 9 -->
+      <article class="card" id="principle-9" aria-labelledby="title-9">
+        <div class="card-header">
+          <span class="card-num" aria-label="Principle 9">09</span>
+          <span class="card-icon" aria-hidden="true">⚙️</span>
+        </div>
+        <div class="card-divider"></div>
+        <h2 class="card-title" id="title-9">Automation Always Wins</h2>
+        <p class="card-desc">
+          Repeated work should never depend on humans. At Path: If something can be automated, it should be automated. CI/CD pipelines, scripts, AI agents, and automation tools are natural parts of our workflow.
+        </p>
+      </article>
 
-      </ol>
+      <!-- 10 -->
+      <article class="card" id="principle-10" aria-labelledby="title-10">
+        <div class="card-header">
+          <span class="card-num" aria-label="Principle 10">10</span>
+          <span class="card-icon" aria-hidden="true">🚀</span>
+        </div>
+        <div class="card-divider"></div>
+        <h2 class="card-title" id="title-10">Speed and Quality Go Together</h2>
+        <p class="card-desc">
+          Path moves fast. But speed is never an alternative to quality. Speed is achieved through: the right tools, the right automation, the right architecture.
+        </p>
+      </article>
 
-      <blockquote class="manifesto-quote">
-        "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." — Martin Fowler
-      </blockquote>
+      <!-- 11 -->
+      <article class="card" id="principle-11" aria-labelledby="title-11">
+        <div class="card-header">
+          <span class="card-num" aria-label="Principle 11">11</span>
+          <span class="card-icon" aria-hidden="true">📡</span>
+        </div>
+        <div class="card-divider"></div>
+        <h2 class="card-title" id="title-11">Learning Never Stops</h2>
+        <p class="card-desc">
+          Technology constantly evolves. Everyone at Path is expected to: learn, research, share knowledge. Knowledge is never hidden. It is shared.
+        </p>
+      </article>
 
-      <!-- CTA Section -->
-      <section class="cta" aria-labelledby="cta-heading">
-        <h2 id="cta-heading">Share the Manifesto</h2>
-        <p>If these principles resonate with you, share them with your team, your community, and anyone who builds software for a living.</p>
-        <a href="https://twitter.com/intent/tweet?text=The%20Software%20Manifesto%20%E2%80%94%2010%20principles%20every%20developer%20should%20live%20by%20%F0%9F%9A%80&url=https%3A%2F%2Fsoftwaremanifesto.dev" class="btn" rel="noopener noreferrer" target="_blank">
-          Share on Twitter
-        </a>
-      </section>
+      <!-- 12 -->
+      <article class="card" id="principle-12" aria-labelledby="title-12">
+        <div class="card-header">
+          <span class="card-num" aria-label="Principle 12">12</span>
+          <span class="card-icon" aria-hidden="true">🏆</span>
+        </div>
+        <div class="card-divider"></div>
+        <h2 class="card-title" id="title-12">We Deliver Results</h2>
+        <p class="card-desc">
+          At Path we measure: not hours, not effort — but results. We do not produce tasks. We produce outcomes.
+        </p>
+      </article>
 
     </div>
-  </main>
+  </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- Summary -->
+  <div class="summary-section" aria-labelledby="summary-title">
+    <h2 class="summary-title" id="summary-title">Path Culture Summary</h2>
+    <p class="summary-body">
+      Path is built on a foundation of values that make us who we are. Every principle reinforces the next — together they form a complete picture of how we operate, think, and deliver.
+    </p>
+    <div class="summary-pillars" role="list">
+      <span class="pillar" role="listitem">🤖 AI-First Organization</span>
+      <span class="pillar" role="listitem">🌍 Remote-First Team</span>
+      <span class="pillar" role="listitem">🎯 Ownership &amp; Responsibility</span>
+      <span class="pillar" role="listitem">⚙️ Automation-Driven</span>
+      <span class="pillar" role="listitem">📚 Learning Culture</span>
+      <span class="pillar" role="listitem">🏆 Results-Focused</span>
+    </div>
+    <p class="summary-closing">
+      We do not just build software. <strong>We build systems that create impact.</strong>
+    </p>
+  </div>
+
+  <!-- Footer -->
   <footer>
-    <div class="container">
-      <p>
-        &copy; 2026 <a href="/">Software Manifesto</a> &mdash;
-        A living document for software developers worldwide.
-        <br />
-        <small>Built with semantic HTML, plain CSS, and zero dependencies.</small>
-      </p>
-    </div>
+    <p>
+      <strong>Path Culture Book</strong> &mdash; The 12 Principles of Path
+      &nbsp;·&nbsp;
+      Path İnternet Çözüm Hizmetleri A.Ş.
+      &nbsp;·&nbsp;
+      <span>Bilişim Vadisi Teknopark, Turkey</span>
+    </p>
   </footer>
 
 </body>
