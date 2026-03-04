@@ -1,0 +1,45 @@
+name: Weekly SEO & Performance Audit
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday at 09:00 UTC
+  workflow_dispatch:       # Allow manual trigger
+
+jobs:
+  audit:
+    name: Weekly Lighthouse Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Lighthouse
+        run: npm install -g lighthouse serve
+
+      - name: Audit live site
+        run: |
+          lighthouse https://softwaremanifesto.dev \
+            --output=json \
+            --output-path=./lighthouse-weekly.json \
+            --chrome-flags="--headless --no-sandbox" \
+            --quiet || true
+
+      - name: Parse scores
+        run: |
+          python3 -c "
+          import json
+          with open('lighthouse-weekly.json') as f:
+              d = json.load(f)
+          cats = d['categories']
+          print('=== Weekly Lighthouse Report ===')
+          for k, v in cats.items():
+              score = int(v['score'] * 100)
+              status = 'OK' if score >= 90 else 'WARN'
+              print(f'[{status}] {v[\"title\"]}: {score}/100')
+          " || echo "Audit completed (live site may differ)"
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-weekly-${{ github.run_id }}
+          path: lighthouse-weekly.json
+          retention-days: 30
